@@ -1,0 +1,23 @@
+/* Place CSS styles here */
+
+/* SITE WIDE DESIGNS SYSTEM */
+
+body{
+    line-height: 1.6;
+}
+
+h1 {
+font-size: 5.61rem;
+font-weight: 500;
+color: #000000;
+}
+
+
+
+/* HOME PAGE */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
