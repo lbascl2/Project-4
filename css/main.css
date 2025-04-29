@@ -2,13 +2,27 @@
 
 /* SITE WIDE DESIGNS SYSTEM */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     line-height: 1.6;
 }
 
+h1 {
+  font-size: 5.61rem;
+  font-weight: 500;
+  color: #000000;
+}
 
 
-/* NAVIGATION */
+
+
+
+
+
+/* HERO */
 
 .hero {
     background-color: #a6a6a6;
@@ -17,12 +31,17 @@ body{
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 5.61rem;
-    font-weight: 500;
-    color: #000000;
-    margin-top: 200px;
-  }
+.hero h1 {
+  margin-top: 200px;
+}
+
+
+
+
+
+
+
+/* NAVIGATION */
 
 .navigation {
     display: flex;
@@ -48,6 +67,12 @@ body{
 a.logo:hover, a.header-links:hover {
     color:#ffffff
 }
+
+
+
+
+
+
 
 /* RESPONSIVE HAMBURGER AND MENU */
 .links-and-burger {
@@ -92,6 +117,12 @@ a.logo:hover, a.header-links:hover {
     }
   }
 
+
+
+
+
+
+
   /* FOOTER */
 
   .temp {
@@ -103,6 +134,105 @@ a.logo:hover, a.header-links:hover {
     margin: 0;
     bottom: 0;
     text-align: center;
+  }
+
+  footer p {
+    padding: 40px;
+    margin: 0;
+  }
+
+  .back-to-top-button {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+  }
+
+  .back-to-top-button:hover {
+    background-color: rgb(49, 49, 49);
 
   }
 
+  a.back-to-top-button {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+
+
+
+
+
+
+  /* PROJECT TEMPLATE PAGE-------------------------- */
+
+  /* HERO STICKY  */
+
+.project-hero {
+  background-color: #a6a6a6;
+  height: 50vh;
+  padding-top: 10px;
+  text-align: center;
+  top: 0;
+  position: sticky;
+  z-index: -1;
+}
+
+.content {
+  background-color: #ffffff;
+}
+
+.project-description {
+  position: sticky;
+  padding: 600px;
+}
+
+
+/* SECTION */
+
+.main-image-sizing {
+  height: 50vh;
+  display: flex;
+  padding: 6rem;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+}
+
+.main-image {
+  width: 100%;
+  height:100%;
+}
+
+
+.project-description-parent {
+  display: flex;
+}
+
+.project-brief {
+  padding: 3rem;
+  padding-left: 12.5%;
+  width: 50%;
+}
+
+.project-details {
+  padding: 3rem;
+  padding-right: 12.5%;
+  width: 50%;
+}
+
+.project-brief-space {
+  padding-bottom: 1em;
+}
+
+.question {
+  font-weight: bold;
+}
+
+.more-images-parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.extra-image-container:nth-child(odd) {
+  flex-direction: row-reverse;
+}
