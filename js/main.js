@@ -9,3 +9,14 @@ menuToggle.addEventListener('click', () => {
   menu.classList.toggle('expanded');
   menuToggle.classList.toggle('is-active'); // Animation toggle
 });
+
+
+
+$('.carousel').slick({
+  dots: true,
+  arrows: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
