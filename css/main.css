@@ -1,6 +1,6 @@
 /* Place CSS styles here */
 
-/* SITE WIDE DESIGNS SYSTEM */
+/* SITE WIDE DESIGNS SYSTEM  -------------------------*/ 
 
 html {
   scroll-behavior: smooth;
@@ -21,11 +21,12 @@ h1 {
 
 
 
+/* LANDING PAGE -----------------------------------*/
 
 /* HERO */
 
 .hero {
-    background-color: #a6a6a6;
+    background-color: #ACBED8;
     height: 100vh;
     padding-top: 10px;
     text-align: center;
@@ -36,31 +37,79 @@ h1 {
 
 .hero h1 {
   margin-top: 200px;
+  font-family: 'Somerton Dense', sans-serif;
+  color:#ffffff;
+  font-size: 10vw;
+  text-align: left;
+  margin-left: 4rem;
 }
 
 .letter {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 3.0s forwards;
+  margin: -0.5rem;
+
 }
 
-.letter:nth-child(1) { animation-delay: 0s; }
-.letter:nth-child(2) { animation-delay: 0.2s; }
-.letter:nth-child(3) { animation-delay: 0.4s; }
-.letter:nth-child(4) { animation-delay: 0.6s; }
-.letter:nth-child(5) { animation-delay: 0.8s; }
-.letter:nth-child(6) { animation-delay: 1.0s; }
-
-
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width:768px) {
+  .letter {
+    margin:-.3rem;
   }
 }
 
+
+
+.animated-heading-2 {
+  margin-top: -18rem;
+}
+
+@media (max-width:1189px) {
+  .animated-heading-2 {
+    margin-top:-15rem;
+  }
+}
+@media (max-width:990px) {
+  .animated-heading-2 {
+    margin-top:-12rem;
+  }
+}
+@media (max-width:798px) {
+  .animated-heading-2 {
+    margin-top:-9rem;
+  }
+}
+@media (max-width:600px) {
+  .animated-heading-2 {
+    margin-top:-7rem;
+  }
+}
+
+  @media (max-width:470px) {
+    .animated-heading-2 {
+      margin-top:-5rem;
+    }
+}
+
+
+
+.animated-heading-1 span {
+  display: inline-block;
+  transition: transform 0.3s ease, color 1s ease;
+  cursor: default;
+}
+
+.animated-heading-1 span:hover {
+  transform: translateY(-8px);
+  color: #DE6E4B; 
+}
+
+.animated-heading-2 span {
+  display: inline-block;
+  transition: color 1s ease;
+}
+
+.animated-heading-2 span:hover {
+  color: #de4b99; 
+}
 
 
 
@@ -70,30 +119,42 @@ h1 {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    padding-right: 6rem;
     align-items: center;
     z-index: 10;
 }
 
-.logo {
-    font-size: 21px;
-    margin: 10px;
-    color: #000000;
-    text-decoration: none;
+ .header-links, 
+ .logo {
+  position: relative; 
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin: 10px;
+  margin-left: 3rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 4px; 
 }
 
-.header-links {
-    font-size: 21px;
-    margin: 10px;
-    color: #000000;
-    text-decoration: none;
+.header-links::after,
+.logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  width: 100%;
+  height: 2px;
+  background-color: #DE6E4B; 
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
-a.logo:hover, a.header-links:hover {
-    color:#ffffff
+.header-links:hover::after,
+.logo:hover::after {
+  transform: scaleX(1);
 }
-
-
-
 
 
 
@@ -141,84 +202,189 @@ a.logo:hover, a.header-links:hover {
     }
   }
 
+  @media (max-width:768px) {
+    .navigation {
+      padding-right: 1rem;
+    }
+  }
 
 
-  /* BODY */
+  /* ABOUT SECTION */
+
+  .about-flex {
+    display: flex;
+  }
 
   .about {
-    padding: 8rem;
+    padding: 8em;
+    padding-top: 3em;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    padding-bottom: 0;
   }
 
-  .about:hover {
+    .about:hover {
     opacity:1;
-    opacity: 0.6;
+  }
+
+  .about-image-parent {
+    height: 75vh;
+  }
+
+  .about-image {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    margin: 3rem;
+    margin-right: 8rem;
+    margin-top: 8em;
+  }
+
+  .about h2 {
+    font-family: 'Somerton Dense', sans-serif;
+    font-size: 5rem;
+    color:#DE6E4B;
+    margin-bottom: 0;
+  }
+
+  .about p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1;
+    line-height: 1.67;
+    color: #292828;
+  }
+
+  .button {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #de4b99;
+    border: 2px solid #de4b99;    
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;;
+
+  }
+
+  .button:hover {
+    background-color: #de4b99;
+    color: #ffffff;
   }
 
 
 
-  .image-feature {
+
+/* FEATURED WORK SECTION */
+
+.featured-background {
+  background-color: #F2D398;
+}
+
+.featured h2 {
+  font-family: 'Somerton Dense', sans-serif;
+  font-size: 5rem;
+  color:#DE6E4B;
+  margin-bottom: 0;
+  padding: 8rem;
+  padding-bottom: 0;
+  text-align: right;
+}  
+
+
+.image-feature {
      width:100%
   }
 
-
-  .row {
-    margin: 8px -16px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  h3 {
+    font-family: 'Somerton Dense', sans-serif;
+    font-size: 2.5rem;
+    color:#de4b99;
   }
-  
-
-  .row,
-  .row > .column {
-    padding: 8px;
-  }
-  
-  .column {
-    width: 20%;
-  }
-  
 
 
+.row {
+  margin: 8px -16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 12rem;
+}
 
-  .box {
-    background-color: white;
-    padding: 10px;
-  }
+.row,
+.row > .column {
+  padding: 8px;
+  padding-bottom: 4rem;
+}
+
+.column {
+  width: 20%;
+}
   
-  /* Responsive layout - makes a two column-layout instead of four columns */
+.box:hover {
+  transform: scale(1.2)
+}
+
+.box {
+  background-color: white;
+  padding: 10px;
+}
+  
   @media screen and (max-width: 900px) {
     .column {
       width: 50%;
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
     }
   }
 
+/* CONTACT SECTION */
 
+.contact {
+  padding: 8em;
+  padding-top: 3em;
+}
 
-  /* FOOTER */
+.contact h2 { 
+  font-family: 'Somerton Dense', sans-serif;
+  font-size: 5rem;
+  color:#DE6E4B;
+  margin-bottom: 0;
+}
+
+.contact p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1;
+  line-height: 1.67;
+  margin-bottom: 3em;
+  color: #292828;
+}
+
+/* FOOTER */
 
   footer {
-    background-color:#a6a6a6;
+    background-color:#ACBED8;
     margin: 0;
     bottom: 0;
     text-align: center;
     position: relative;
     z-index: 30;
-    margin-top: 100px;
   }
 
   footer p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1;
+    line-height: 1.67;
     padding: 40px;
-    margin: 0;
+    color: #292828;
   }
 
   .back-to-top-button {
