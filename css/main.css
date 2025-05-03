@@ -124,7 +124,7 @@ h1 {
     z-index: 10;
 }
 
- .header-links, 
+ .links, 
  .logo {
   position: relative; 
   font-family: "Roboto", sans-serif;
@@ -137,7 +137,7 @@ h1 {
   padding-bottom: 4px; 
 }
 
-.header-links::after,
+.links::after,
 .logo::after {
   content: '';
   position: absolute;
@@ -151,7 +151,7 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-.header-links:hover::after,
+.links:hover::after,
 .logo:hover::after {
   transform: scaleX(1);
 }
@@ -266,12 +266,48 @@ h1 {
     padding: 10px;
     margin-top: 40px;
     margin-bottom: 40px;;
+    background-color: #ffffff00;
 
   }
 
   .button:hover {
     background-color: #de4b99;
     color: #ffffff;
+  }
+
+    
+  @media (max-width:1055px) {
+
+    .about {
+      opacity: 1;
+      padding: 2em;
+    }
+
+    .about p {
+      font-size: 12px;
+    }
+
+    .about-image-parent {
+      height: 0vh;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  @media (max-width:645px) {
+    .about-flex {
+      flex-direction: column;
+    }
+
+    .about-image {
+      width: auto;
+      height: 70%;
+      object-fit: cover;
+      margin: 3rem;
+      margin-right: 8rem;
+      margin-top: -15em;
+      opacity: 0;
+    } 
   }
 
 
@@ -370,12 +406,13 @@ h1 {
 /* FOOTER */
 
   footer {
-    background-color:#ACBED8;
+    background-color:#ffffff;
     margin: 0;
     bottom: 0;
     text-align: center;
     position: relative;
     z-index: 30;
+    margin-bottom: 0;
   }
 
   footer p {
@@ -385,37 +422,41 @@ h1 {
     line-height: 1.67;
     padding: 40px;
     color: #292828;
-  }
-
-  .back-to-top-button {
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 30px;
-  }
-
-  .back-to-top-button:hover {
-    background-color: rgb(49, 49, 49);
-
-  }
-
-  a.back-to-top-button {
-    text-decoration: none;
-    color: #ffffff;
+    margin-bottom: 0;
   }
 
 
+/* ABOUT PAGE--------------------------------------------------------------------------------- */
+
+.about-content {
+  padding: 8em;
+  padding-top: 3em;
+}
+
+.about-content h2{
+  font-family: 'Somerton Dense', sans-serif;
+  font-size: 5rem;
+  color:#DE6E4B;
+  margin-bottom: 0;
+}
+
+.about-content p{
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1;
+  line-height: 1.67;
+  color: #292828;
+}
 
 
 
 
+/* PROJECT TEMPLATE PAGE------------------------------------------------------------------- */
 
-  /* PROJECT TEMPLATE PAGE-------------------------- */
-
-  /* HERO STICKY  */
+/* HERO STICKY  */
 
 .project-hero {
-  background-color: #a6a6a6;
+  background-color: #ACBED8;
   height: 50vh;
   padding-top: 10px;
   text-align: center;
@@ -424,10 +465,20 @@ h1 {
   z-index: 1;
 }
 
+.project-hero h1 {
+  margin-top: 30px;
+  font-family: 'Somerton Dense', sans-serif;
+  color:#ffffff;
+  font-size: 10vw;
+  text-align: left;
+  margin-left: 4rem;
+}
+
 .content {
   background-color: #ffffff;
   position: relative;
   z-index: 20;
+  padding-top: 50px;
 }
 
 .project-description {
@@ -498,8 +549,6 @@ h1 {
 }
 
 
-
-
 .carousel {
   /* max-width: 700px;
   margin: 0 auto; */
@@ -548,7 +597,36 @@ h1 {
 
 
 
-/* FORM PAGE----------------------- */
+/* FORM PAGE--------------------------------------------------------------- */
+
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem;
+}
+
+.contact-info .links {
+  color: #DE6E4B;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.contact-info h2 {
+  font-family: 'Somerton Dense', sans-serif;
+  font-size: 5rem;
+  color:#DE6E4B;
+  margin-bottom: 0;
+}
+
+.contact-info p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1;
+  line-height: 1.67;
+  color: #292828;
+}
 
   form {
     width: 400px;
@@ -556,10 +634,13 @@ h1 {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    font-family: "Roboto", sans-serif;
   }
+
   label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
    }
 
    .firstname-label {
@@ -567,31 +648,29 @@ h1 {
    }
 
    .terms-text {
-    margin-left: 30px;
+    margin-left: 0px;
    }
 
-  input, select, textarea {
+   label {
+    padding-left: .5em;
+   }
+
+   input, select, textarea {
     width: 100%;
     padding: 8px;
+    padding-left: 0;
     margin: 10px;
     box-sizing: border-box;
     background-color: rgb(255, 255, 255);
-    border-radius: 25px;
-  }
-  .button-2 {
-    background-color: #F7CFDA;
-    font-family: "Montserrat", arial, sans-serif;
-    color: rgb(0, 0, 0);
-    padding: 10px 15px;
+    
     border: none;
-    cursor: pointer;
-    margin-bottom: 100px;
-    border-radius: 25px;
+    border-bottom: 2px solid #ccc; 
+    outline: none;
+    transition: border-color 0.3s ease;
   }
-
-  .button-2:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+  
+  input:focus, select:focus, textarea:focus {
+    border-bottom-color: #de4b99;
   }
   
   .error {
@@ -604,10 +683,6 @@ h1 {
 
   .form-flex-message {
     height: 20vh;
-  }
-
-  .message {
-    padding: 15vh;
   }
 
   .terms {
