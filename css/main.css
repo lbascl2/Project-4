@@ -235,6 +235,11 @@ h1 {
     margin: 3rem;
     margin-right: 8rem;
     margin-top: 8em;
+    transition: transform .7s ease-in-out;
+  }
+
+  .about-image:hover {
+    transform: rotate(5deg);
   }
 
   .about h2 {
@@ -314,7 +319,7 @@ h1 {
 /* FEATURED WORK SECTION */
 
 .featured-background {
-  background-color: #F2D398;
+  background-color: #f7f2e8;
 }
 
 .featured h2 {
@@ -499,6 +504,26 @@ h1 {
 .display-rows {
   display: flex;
   flex-direction: row;
+}
+
+@media screen and (max-width: 900px) {
+  .display-rows {
+    flex-direction: column;
+  }
+  .project-list{
+    padding-bottom:0;
+  }
+
+  .project-list h2 {
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
+
+  .img-display {
+    padding: 0;
+    margin: 0;
+    margin-left: 3em;
+  }
 }
 
 
