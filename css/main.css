@@ -213,7 +213,7 @@ h1 {
   }
 
   .about {
-    padding: 8em;
+    padding: 4em;
     padding-top: 3em;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -381,7 +381,7 @@ h1 {
 /* CONTACT SECTION */
 
 .contact {
-  padding: 8em;
+  padding: 4em;
   padding-top: 3em;
 }
 
@@ -430,7 +430,7 @@ h1 {
 /* ABOUT PAGE--------------------------------------------------------------------------------- */
 
 .about-content {
-  padding: 8em;
+  padding: 4em;
   padding-top: 3em;
 }
 
@@ -452,7 +452,7 @@ h1 {
 /* ALL PROJECTS PAGE ---------------------------------------------------------------------- */
 
 .project-list {
-  padding: 8em;
+  padding: 4em;
   padding-top: 3em;
 }
 
@@ -461,6 +461,44 @@ h1 {
   font-size: 5rem;
   color:#DE6E4B;
   margin-bottom: 0;
+}
+
+.img-display p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1;
+  line-height: 1.67;
+  margin-bottom: 3em;
+  color: #292828;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.img-display a {
+  text-decoration: none;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-display {
+  max-width: 50%;
+  width: 50vw;
+  height: auto;
+  padding: 2em;
+  margin: 3em;
+}
+
+.img-display:hover {
+  transform: scale(1.1)
+}
+
+.display-rows {
+  display: flex;
+  flex-direction: row;
 }
 
 
