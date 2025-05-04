@@ -23,7 +23,7 @@ h1 {
 /* HERO */
 
 .hero {
-    background-color: #ACBED8;
+    background-color: #7896BF;
     height: 100vh;
     padding-top: 10px;
     text-align: center;
@@ -462,7 +462,7 @@ h1 {
   top:0;
 }
 .content-2 {
-  background-color:#f7f2e8;
+  background-color:#fff9f7;
   position: relative;
   z-index: 40;
   padding-top: 50px;
