@@ -132,6 +132,7 @@ h1 {
   color: #ffffff;
   text-decoration: none;
   padding-bottom: 4px; 
+  text-shadow: 2px 2px 5px #086788;
 }
 
 .links::after,
@@ -142,7 +143,7 @@ h1 {
   bottom: 0; 
   width: 100%;
   height: 2px;
-  background-color: #DE6E4B; 
+  background-color: #de4b99; 
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -268,8 +269,8 @@ h1 {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: #de4b99;
-    border: 2px solid #de4b99;    
+    color: #086788;
+    border: 2px solid #086788;    
     border-radius: 20px;
     text-decoration: none;
     padding: 10px;
@@ -281,7 +282,7 @@ h1 {
   }
 
   .button:hover {
-    background-color: #de4b99;
+    background-color: #086788;
     color: #ffffff;
   }
 
@@ -326,7 +327,7 @@ h1 {
 /* FEATURED WORK SECTION */
 
 .featured-background {
-  background-color: #f7f2e8;
+  background-color: #fff9f7;
 }
 
 .featured h2 {
