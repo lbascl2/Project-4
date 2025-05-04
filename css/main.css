@@ -129,10 +129,9 @@ h1 {
   font-size: 18px;
   margin: 10px;
   margin-left: 3rem;
-  color: #ffffff;
+  color: #06506B;
   text-decoration: none;
   padding-bottom: 4px; 
-  text-shadow: 2px 2px 5px #086788;
 }
 
 .links::after,
