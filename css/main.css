@@ -163,7 +163,7 @@ h1 {
   
   .menu {
     position: fixed;
-    top: 164px;
+    top: 80px;
     right: 0;
     height: 100%;
     width: 100%;
@@ -181,10 +181,11 @@ h1 {
     transform: translateX(0);
     background-color: rgb(255, 255, 255);
     padding-top: 5em;
+    z-index: 100;
   }
 
   .menu.expanded a {
-    color: black; /* Or another visible color */
+    color: black; 
   }
   
   
@@ -635,8 +636,6 @@ h1 {
 /* SECTION */
 
 .main-image-sizing {
-  /* padding: 50px;
-  padding-bottom: 0px; */
   padding: 0;
   margin: 0 auto;
   max-width: 100%;
@@ -644,10 +643,6 @@ h1 {
 }
 
 .main-image {
-  /* height: 60vh;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto; */
   width: 80%;
   padding: 10%;
   padding-bottom: 0;
@@ -695,19 +690,11 @@ h1 {
 
 
 .carousel {
-  /* max-width: 700px;
-  margin: 0 auto; */
-  width: 100%;
   max-width: 700px;
   margin: 0 auto;
 }
 
 .carousel-image {
-  /* height: 400px;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto; */
   width: 100%;
   height: auto;
   object-fit: contain;
